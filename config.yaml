@@ -1,0 +1,10 @@
+- name: "item1"
+  value: "value1"
+  items:
+    - name: "nestedItem1"
+      value: "nestedValue1"
+    - name: "nestedItem2"
+      value: "nestedValue2"
+- name: "item2"
+  value: "value2"
+  items: [123, 123123, 1231 3]

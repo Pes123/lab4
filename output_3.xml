@@ -1,0 +1,23 @@
+<day>Суббота</day>
+<lessons>
+  <first>
+    <start>8:20</start>
+    <item>123</item>
+    <item>132</item>
+    <end>9:50</end>
+    <item>apple</item>
+    <item>riba</item>
+    <name>Линейная алгебра</name>
+    <typ::e>Лекция</typ::e>
+    <teacher>Исаева Татьяна Тимофеевна</teacher>
+    <for:mat>Дистан:ционный</for:mat>
+  </first>
+  <second>
+    <teacher>Блейхер Оксана Владимировна</teacher>
+    <format>Дистанционный</format>
+    <start>10:00</start>
+    <end>11:30</end>
+    <name>Математический анализ</name>
+    <type>Лекция</type>
+  </second>
+</lessons>

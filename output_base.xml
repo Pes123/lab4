@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config>
+<day>Понедельник</day>
+<lessons>
+  <first>
+    <name>Основы дискретной математики</name>
+    <type>Лекция</type>
+    <teacher>Поляков Владимир Иванович</teacher>
+    <audience>2403</audience>
+    <building>Кронверский пр., д.49, лит.А</building>
+    <start>11:40</start>
+    <end>13:10</end>
+  </first>
+  <second>
+    <name>Основы дискретной математики</name>
+    <type>Практика</type>
+    <teacher>Поляков Владимир Иванович</teacher>
+    <audience>2403</audience>
+    <building>Кронверский пр., д.49, лит.А</building>
+    <start>13:30</start>
+    <end>15:00</end>
+  </second>
+</lessons>

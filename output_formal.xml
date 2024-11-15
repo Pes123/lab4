@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config>
+<day>Суббота</day>
+<lessons>
+  <!-- 123141421 -->
+  <first>
+    <tag>apple</tag>
+    <tag>rib&gt;</tag>
+    <name>Линейная алгебра</name>
+    <typ::e>Лекция</typ::e>
+    <teacher>Исаева Татьяна Тимофеевна</teacher>
+    <for:mat>Дист&gt;ан:ционный</for:mat>
+    <start>8:20</start>
+    <test>123</test>
+    <test>132</test>
+    <!-- 12314124 -->
+    <end>9:50</end>
+  </first>
+  <second>
+    <!-- 12314221 -->
+    <name>Математический анализ</name>
+    <type>Лекция</type>
+    <teacher>Блейхер Оксана Владимировна</teacher>
+    <format>Дистанционный</format>
+    <start>10:00</start>
+    <end>11:30</end>
+  </second>
+</lessons>
+</config>
