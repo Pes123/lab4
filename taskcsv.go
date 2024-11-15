@@ -27,28 +27,35 @@ func taskcsv() {
 	day := ""
 	var tagList []string
 
+	//в теории чтобы потом модно
+	tagMap := map[string]int{
+		"name:":     0,
+		"type:":     1,
+		"teacher:":  2,
+		"audience:": 3,
+		"building:": 4,
+		"start:":    5,
+		"end:":      6,
+	}
+
 	for _, line := range lines {
 		line = strings.TrimSpace(line)
 
 		if strings.HasPrefix(line, "day:") {
 			day = strings.TrimSpace(line[strings.Index(line, ":")+1:])
-		} else if strings.HasPrefix(line, "name:") {
-			// Если tagList уже чет в себе имеет, то была пройдена строка, значит можно записываться в csv
-			name := strings.TrimSpace(line[strings.Index(line, ":")+1:])
-			tagList = []string{name} // обнуляем taglist для следующей строки, а затем обрабатываем каждый элемент yaml в лоб
-		} else if strings.HasPrefix(line, "type:") {
-			tagList = append(tagList, strings.TrimSpace(line[strings.Index(line, ":")+1:]))
-		} else if strings.HasPrefix(line, "teacher:") {
-			tagList = append(tagList, strings.TrimSpace(line[strings.Index(line, ":")+1:]))
-		} else if strings.HasPrefix(line, "audience:") {
-			tagList = append(tagList, strings.TrimSpace(line[strings.Index(line, ":")+1:]))
-		} else if strings.HasPrefix(line, "building:") {
-			tagList = append(tagList, strings.TrimSpace(line[strings.Index(line, ":")+1:]))
-		} else if strings.HasPrefix(line, "start:") {
-			tagList = append(tagList, strings.TrimSpace(line[strings.Index(line, ":")+1:]))
-		} else if strings.HasPrefix(line, "end:") {
-			tagList = append(tagList, strings.TrimSpace(line[strings.Index(line, ":")+1:]))
-			csvContent.WriteString(writeToCSV(day, tagList))
+		} else {
+			for prefix, index := range tagMap {
+				if strings.HasPrefix(line, prefix) {
+					if prefix == "name:" {
+						tagList = make([]string, len(tagMap))
+					}
+					tagList[index] = strings.TrimSpace(line[strings.Index(line, ":")+1:])
+					if prefix == "end:" {
+						csvContent.WriteString(writeToCSV(day, tagList))
+					}
+					break
+				}
+			}
 		}
 	}
 
